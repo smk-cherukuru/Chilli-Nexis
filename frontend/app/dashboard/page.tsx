@@ -185,7 +185,8 @@ export default function Dashboard() {
     formData.append('file', selectedImage);
 
     try {
-      const response = await fetch('http://localhost:8000/predict', {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://chilli-nexis.onrender.com';
+      const response = await fetch(`${API_URL}/predict`, {
         method: 'POST',
         body: formData,
       });
