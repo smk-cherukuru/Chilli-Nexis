@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% set active_page = 'contact' %}
+
+{% block title %}Contact Us | Chilli Care{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Get in touch with the Chilli Care Team.">
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+    .team-member {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        text-align: center;
+        transition: transform 0.3s ease;
+        border: 1px solid var(--gray-light);
+    }
+    .team-member:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    .member-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--primary-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: var(--primary-color);
+        font-size: 2rem;
+    }
+    .member-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: 5px;
+    }
+    .member-roll {
+        color: var(--gray-600);
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        font-family: monospace;
+        background: #f8f9fa;
+        padding: 4px 10px;
+        border-radius: 20px;
+        display: inline-block;
+    }
+    .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #25D366;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+        background: #128C7E;
+        color: white;
+    }
+    .page-hero-banner {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: white;
+        border-radius: 0 0 30px 30px;
+        margin-bottom: 40px;
+    }
+    .page-hero-banner h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner">
+        <div class="container">
+            <h1>Meet The Team</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">The brilliant minds behind Chilli Care.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section style="padding: 2rem 0 5rem; background: white;">
+        <div class="container" style="max-width: 1200px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2rem; font-weight: 700; color: var(--gray-900);">Project Contributors</h2>
+                <p style="color: var(--gray-600); font-size: 1.1rem; max-width: 600px; margin: 10px auto 0;">Reach out to any of our team members directly via WhatsApp.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="team-member">
+                    <div class="member-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="member-name">P VARSHITHA</div>
+                    <div class="member-roll">234E1A05E1</div>
+                    <a href="https://wa.me/234E1A05E1?text=Hello%20from%20Chilli%20Care" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Message
+                    </a>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-member">
+                    <div class="member-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="member-name">ARSAD ARZOO</div>
+                    <div class="member-roll">234E1A05F8</div>
+                    <a href="https://wa.me/234E1A05F8?text=Hello%20from%20Chilli%20Care" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Message
+                    </a>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-member">
+                    <div class="member-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="member-name">CHERUKURU SIVA MANIKANTA</div>
+                    <div class="member-roll">234E1A05B3</div>
+                    <a href="https://wa.me/234E1A05B3?text=Hello%20from%20Chilli%20Care" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Message
+                    </a>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-member">
+                    <div class="member-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="member-name">RANJANI KUMARI</div>
+                    <div class="member-roll">234E1A05G5</div>
+                    <a href="https://wa.me/234E1A05G5?text=Hello%20from%20Chilli%20Care" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Message
+                    </a>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="team-member">
+                    <div class="member-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="member-name">MANDYAM VENKAT DURGA PRASAD</div>
+                    <div class="member-roll">234E1A05E2</div>
+                    <a href="https://wa.me/234E1A05E2?text=Hello%20from%20Chilli%20Care" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

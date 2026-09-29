@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block title %}Chilli Marketplace - Chilli Care{% endblock %}
+
+{% block extra_css %}
+<style>
+    .marketplace-header {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: white;
+        margin-bottom: 40px;
+        border-radius: 0 0 30px 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .marketplace-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .marketplace-header p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.9;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 0 20px 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid var(--gray-light);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+        height: 200px;
+        background-color: var(--gray-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: var(--gray);
+        border-bottom: 1px solid var(--gray-light);
+    }
+
+    .product-info {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-category {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .product-title {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        color: var(--text-color);
+    }
+
+    .product-price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-color);
+        margin-bottom: 15px;
+    }
+
+    .product-desc {
+        color: var(--gray);
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        flex-grow: 1;
+    }
+
+    .buy-btn {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .buy-btn:hover {
+        background-color: var(--primary-dark);
+    }
+
+    .badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #ff4757;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="marketplace-header">
+    <h1>Chilli Marketplace</h1>
+    <p>Premium seeds, organic fertilizers, and protective gear for your chilli farm. Cultivate the best with the best.</p>
+</div>
+
+<div class="products-grid">
+    <!-- Product 1 -->
+    <div class="product-card" style="position: relative;">
+        <div class="badge">Best Seller</div>
+        <div class="product-image" style="background: linear-gradient(45deg, #fceabb, #f8b500); color: #d35400;">
+            <i class="fas fa-seedling"></i>
+        </div>
+        <div class="product-info">
+            <div class="product-category">Seeds</div>
+            <h3 class="product-title">Ghost Pepper (Bhut Jolokia) Seeds</h3>
+            <div class="product-price">LKR 450</div>
+            <p class="product-desc">Premium quality, high-germination ghost pepper seeds. Grown organically for maximum heat and yield.</p>
+            <button class="buy-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="product-image" style="background: linear-gradient(45deg, #56ab2f, #a8e063); color: #2ecc71;">
+            <i class="fas fa-leaf"></i>
+        </div>
+        <div class="product-info">
+            <div class="product-category">Fertilizers</div>
+            <div class="product-title">Organic NitroBoost Fertilizer</div>
+            <div class="product-price">LKR 1,200</div>
+            <p class="product-desc">100% organic liquid fertilizer specifically formulated for the vegetative stage of chilli plants.</p>
+            <button class="buy-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+        <div class="product-image" style="background: linear-gradient(45deg, #4b6cb7, #182848); color: #3498db;">
+            <i class="fas fa-bug"></i>
+        </div>
+        <div class="product-info">
+            <div class="product-category">Pesticides</div>
+            <div class="product-title">Neem Oil Extract (Whitefly Control)</div>
+            <div class="product-price">LKR 850</div>
+            <p class="product-desc">Natural and safe deterrent for whiteflies, aphids, and spider mites. Doesn't harm beneficial insects.</p>
+            <button class="buy-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+        <div class="product-image" style="background: linear-gradient(45deg, #e65c00, #F9D423); color: #e74c3c;">
+            <i class="fas fa-pepper-hot"></i>
+        </div>
+        <div class="product-info">
+            <div class="product-category">Farming Tools</div>
+            <div class="product-title">Precision Pruning Shears</div>
+            <div class="product-price">LKR 1,800</div>
+            <p class="product-desc">Rust-resistant stainless steel shears. Essential for topping plants and harvesting delicate peppers.</p>
+            <button class="buy-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+# Ignore datasets
+Preprocessed Chilli Disease Dataset/
+dataset/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore Node.js
+node_modules/
+.next/
+frontend/node_modules/
+frontend/.next/
+
+# Ignore local databases and uploads
+local_database/
+uploads/
+
+# Ignore environment variables
+.env
+.env.local
+
+# Ignore IDE configs
+.vscode/
+.idea/
+
+# DO NOT ignore models (they are small enough for github)
+# models/
